@@ -149,15 +149,16 @@ int main( int argc, char **argv )
    atexit(SDL_Quit);
 
    screen = SDL_SetVideoMode( format.size.width, format.size.height, 32, SDL_HWSURFACE);
-   //screen = SDL_SetVideoMode( format.size.width, format.size.height, 32, SDL_HWSURFACE|SDL_FULLSCREEN);
    if ( screen == NULL ) {
       fprintf(stderr, "Unable to set video mode: %s\n", SDL_GetError());
       exit(1);
    }
    
+   
+
    overlay = SDL_CreateYUVOverlay( format.size.width, 
 				   format.size.height, 
-				   SDL_YUY2_OVERLAY, 
+				   format.fourcc, 
 				   screen );
    if( overlay == NULL )
    {
@@ -217,7 +218,7 @@ int main( int argc, char **argv )
 
       while( SDL_PollEvent( &event ) )
       {
-	 if( event.type == SDL_KEYDOWN )
+	 if( event.type == SDL_QUIT )
 	 {
 	    printf( "Quit\n" );
 	    quit=1;
