@@ -1,0 +1,8 @@
+facedetect
+facedetect-svn
+device_info
+sdl_display
+tutorial-haartraining
+sdl_display/sdlcam-0.8.2
+sdl_display/sdlcam-0.8.2.tar.gz
+loadimg
