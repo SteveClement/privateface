@@ -28,7 +28,7 @@ clean:
 	rm -f facedetect
 
 run:
-	./facedetect-svn --cascade="data/haarcascade_frontalface_alt.xml" 0
+	./facedetect-svn --cascade="data/haarcascade_frontalface_alt.xml" 1
 
 edit:
 	vi facedetect.c
