@@ -88,3 +88,23 @@ wget http://dircweb.king.ac.uk/reason/simple-examples.tar.gz
 ./build-all.sh
 ./edge fruits.jpg
 ./cvplayer-v2 SEQ-003-C5_X4.mpg
+
+# Compile unicap and ucview on a recent (2015) ubuntu install
+sudo apt-get install bzr autoconf libtool libgettextpo0 gettext gtk-doc-tools libraw1394-dev  libpango1.0-dev libgstreamer0.10-dev libxv-dev  libgtk2.0-dev libgconf2-dev libglade2-dev libglade2.0 libglademm-2.4-dev libgstreamer-ocaml-dev
+
+mkdir ~/unicap & cd ~/unicap
+bzr init; bzr pull lp:unicap ; cd libunicap
+./autogen.sh ; ./configure --datadir=/usr --prefix=/usr --localstatedir=/var --sysconfdir=/etc ; make ; sudo make install
+
+cd ../libucil
+./autogen.sh ;  ./configure --datadir=/usr --prefix=/usr --localstatedir=/var --sysconfdir=/etc ; make; sudo make install
+
+cd ../libunicapgtk/
+./autogen.sh ;  ./configure --datadir=/usr --prefix=/usr --localstatedir=/var --sysconfdir=/etc ; make; sudo make install
+
+mkdir ~/ucview & cd ~/ucview
+bzr init ; bzr pull lp:ucview ; cd trunk/ucview
+./autogen.sh;  ./configure --datadir=/usr --prefix=/usr --localstatedir=/var --sysconfdir=/etc ; make; sudo make install
+
+cd ../ucview-plugins/
+./autogen.sh; ./configure --datadir=/usr --prefix=/usr --localstatedir=/var --sysconfdir=/etc
