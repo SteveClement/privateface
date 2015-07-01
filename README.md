@@ -60,14 +60,15 @@ ucview is a quick an dirty way to see if your unicap cam is working. You need li
 
 sudo apt-get install libglade2-dev bzr libunicap2-dev libunicapgtk2-dev intltool libgconf2-dev
 
-## Defunct on Ubuntu-server?
-bzr pull lp:ucview
+mkdir ucview ; cd ucview ; bzr init ; bzr pull lp:ucview
 
 == OpenCV from Source ==
 
+Wrapper: https://github.com/jayrambhia/Install-OpenCV
+
 sudo apt-get install build-essential cmake cmake-qt-gui
 sudo apt-get install libgtk2.0-dev libavcodec-dev libavformat-dev libjpeg62-dev libtiff4-dev
-sudo apt-get install libdc1394-22-dev libjasper-dev libgstreamer0.10-dev libgstreamermm-0.10-dev 
+sudo apt-get install libdc1394-22-dev libjasper-dev libgstreamer0.10-dev libgstreamermm-0.10-dev libgstreamer-plugins-base0.10-dev
 sudo apt-get install libswscale-dev libv4l-dev libxine-dev libunicap-dev
 
 cmake -D BUILD_EXAMPLES=ON -D CMAKE_INSTALL_PREFIX=/opt ~/OpenCV-2.1.0
@@ -90,7 +91,7 @@ wget http://dircweb.king.ac.uk/reason/simple-examples.tar.gz
 ./cvplayer-v2 SEQ-003-C5_X4.mpg
 
 # Compile unicap and ucview on a recent (2015) ubuntu install
-sudo apt-get install bzr autoconf libtool libgettextpo0 gettext gtk-doc-tools libraw1394-dev  libpango1.0-dev libgstreamer0.10-dev libxv-dev  libgtk2.0-dev libgconf2-dev libglade2-dev libglade2.0 libglademm-2.4-dev libgstreamer-ocaml-dev
+sudo apt-get install bzr autoconf libtool libgettextpo0 gettext gtk-doc-tools libraw1394-dev  libpango1.0-dev libgstreamer0.10-dev libxv-dev  libgtk2.0-dev libgconf2-dev libglade2-dev libglade2.0 libglademm-2.4-dev libgstreamer-ocaml-dev libgstreamer-plugins-base0.10-dev
 
 mkdir ~/unicap & cd ~/unicap
 bzr init; bzr pull lp:unicap ; cd libunicap
