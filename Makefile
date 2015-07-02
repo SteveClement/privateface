@@ -8,7 +8,7 @@ facedetect-svn: facedetect.c
 	#g++ -O2 -O2 -Wall -W -D_REENTRANT  -fopenmp -Wl,-O1 -L/usr/local/lib -lpthread -lopencv_core -lopencv_highgui -lopencv_objdetect -I/usr/local/include/opencv -I. -o "facedetect" facedetect.c
 
 facedetect-mac: facedetect.c
-	g++ -O2 -O2 -Wall -W -D_REENTRANT  -fopenmp -g -o $@ $^ `pkg-config opencv gthread-2.0 --cflags --libs`
+	g++ -O2 -O2 -Wall -W -D_REENTRANT -g -o $@ $^ `pkg-config opencv gthread-2.0 --cflags --libs`
 
 # Compile with Intel IPP
 facedetect-ipp: facedetect.c
@@ -22,7 +22,7 @@ facedetect-ipp-svn: facedetect.c
 facedetect:
 	g++ -O2 -O2 -Wall -W -D_REENTRANT -fopenmp -Wl,-O1 -L/usr/local/lib -lpthread -lcv -lcxcore -lhighgui  -I/usr/local/include/opencv -I. -o "facedetect" facedetect.c
 
-clean: 
+clean:
 	rm -f *.o
 	rm -f *~
 	rm -f facedetect
