@@ -45,13 +45,14 @@ Quick and dirty example on how to load a jpeg draw a window and display it
 
 So you really want this on Mac.
 
-Grab MacPorts:
-
-http://www.macports.org/
+Install Homebrew: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 Install and do the following on a Terminal:
 
-port install subversion opencv
+```
+brew tap homebrew/science
+brew install subversion opencv
+```
 
 in theory all is fine now, but do not forget to adjust you compile line
 
@@ -60,10 +61,10 @@ As expected libunicap is not "that" easy.
 to get libunicap compiled you additionally need to:
 
 ```
-sudo port install intltool
+brew install intltool
 ```
 
-= UCView =
+# UCView
 
 ucview is a quick an dirty way to see if your unicap cam is working. You need libunicap and bazaar to get all going
 
@@ -83,7 +84,7 @@ brew install gconf intltool gettext
 ln -s /usr/local/Cellar/gettext/0.19.4/share/aclocal/nls.m4 /usr/local/share/aclocal/nls.m4
 ```
 
-== OpenCV from Source ==
+## OpenCV from Source
 
 Wrapper: https://github.com/jayrambhia/Install-OpenCV
 
