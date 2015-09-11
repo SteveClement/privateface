@@ -45,7 +45,11 @@ Quick and dirty example on how to load a jpeg draw a window and display it
 
 So you really want this on Mac.
 
-Install Homebrew: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+Install Homebrew: 
+
+```
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
 Install and do the following on a Terminal:
 
