@@ -94,9 +94,9 @@ Wrapper: https://github.com/jayrambhia/Install-OpenCV
 
 ```
 sudo apt-get install build-essential cmake cmake-qt-gui
-sudo apt-get install libgtk2.0-dev libavcodec-dev libavformat-dev libjpeg62-dev libtiff4-dev
-sudo apt-get install libdc1394-22-dev libjasper-dev libgstreamer0.10-dev libgstreamermm-0.10-dev libgstreamer-plugins-base0.10-dev
-sudo apt-get install libswscale-dev libv4l-dev libxine-dev libunicap-dev
+sudo apt-get install libgtk2.0-dev libavcodec-dev libavformat-dev libtiff5-dev
+sudo apt-get install libdc1394-22-dev libjasper-dev libgstreamermm-1.0-dev libgstreamermm-0.10-dev libgstreamer-plugins-base0.10-dev
+sudo apt-get install libswscale-dev libv4l-dev libxine2-dev libunicap-dev
 
 cmake -D BUILD_EXAMPLES=ON -D CMAKE_INSTALL_PREFIX=/opt ~/OpenCV-2.1.0
 cd ~/OpenCV-2.1.0
