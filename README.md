@@ -92,14 +92,19 @@ ln -s /usr/local/Cellar/gettext/0.19.4/share/aclocal/nls.m4 /usr/local/share/acl
 
 Wrapper: https://github.com/jayrambhia/Install-OpenCV
 
+
+FIX!!!!
+
 ```
 sudo apt-get install build-essential cmake cmake-qt-gui
 sudo apt-get install libgtk2.0-dev libavcodec-dev libavformat-dev libtiff5-dev
 sudo apt-get install libdc1394-22-dev libjasper-dev libgstreamermm-1.0-dev libgstreamermm-0.10-dev libgstreamer-plugins-base0.10-dev
 sudo apt-get install libswscale-dev libv4l-dev libxine2-dev libunicap-dev
 
-cmake -D BUILD_EXAMPLES=ON -D CMAKE_INSTALL_PREFIX=/opt ~/OpenCV-2.1.0
-cd ~/OpenCV-2.1.0
+wget https://github.com/Itseez/opencv/archive/2.4.13.zip
+
+cmake -D BUILD_EXAMPLES=ON -D CMAKE_INSTALL_PREFIX=/opt ~/OpenCV-2.4.13
+cd ~/OpenCV-2.4.13
 make
 sudo make install
 echo "add: /opt/lib"
