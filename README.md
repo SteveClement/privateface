@@ -156,3 +156,33 @@ bzr init ; bzr pull lp:ucview ; cd trunk/ucview
 cd ../ucview-plugins/
 ./autogen.sh; ./configure --datadir=/usr --prefix=/usr --localstatedir=/var --sysconfdir=/etc
 ```
+
+# OpenCV 3.1 + contrib
+
+```
+mkdir ~/Desktop/code ; cd ~Desktop/code
+wget https://github.com/Itseez/opencv/archive/3.1.0.zip
+unzip 3.1.0.zip
+cd opencv-3.1.0 ; mkdir build ; cd build
+cmake -DOPENCV_EXTRA_MODULES_PATH=/home/steve/Desktop/code/opencv_contrib/modules -DBUILD_opencv_legacy=OFF -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=OFF -D WITH_V4L=ON -D WITH_QT=ON -D WITH_OPENGL=ON -D BUILD_EXAMPLES=ON ..
+make -j5
+cd doc
+make -j7 html_docs
+cd ../
+sudo make install
+```
+
+# OpenCV Latest + contrib
+
+```
+mkdir ~/Desktop/code ; cd ~Desktop/code
+git clone https://github.com/Itseez/opencv.git
+git clone https://github.com/Itseez/opencv_contrib.git
+cd opencv ; mkdir build ; cd build
+cmake -DOPENCV_EXTRA_MODULES_PATH=/home/steve/Desktop/code/opencv_contrib/modules -DBUILD_opencv_legacy=OFF -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=OFF -D WITH_V4L=ON -D WITH_QT=ON -D WITH_OPENGL=ON -D BUILD_EXAMPLES=ON ..
+make -j7 # runs 7 jobs in parallel
+cd doc
+make -j7 html_docs
+cd ..
+sudo make install
+```
