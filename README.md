@@ -1,6 +1,6 @@
 # Compiling privateface
 
-Packages needed on Ubuntu 15.04 server
+Packages needed on Ubuntu 16.10 server or Debian Jessie (Raspi inclued)
 
 ```
 sudo apt-get install libcv-dev build-essential libglib2.0-dev libhighgui-dev libcvaux-dev
@@ -25,7 +25,7 @@ http://code.google.com/p/tutorial-haartraining/
 and grab the following repo:
 
 ```
-svn co http://tutorial-haartraining.googlecode.com/svn/trunk/HaarTraining/
+git clone https://github.com/Glavin001/tutorial-haartraining.git
 ```
 
 # SDLcam 
@@ -118,7 +118,7 @@ wget http://dircweb.king.ac.uk/reason/simple-examples.tar.gz
 ./cvplayer-v2 SEQ-003-C5_X4.mpg
 ```
 
-# Compile unicap and ucview on a recent (2015) ubuntu install
+# Compile unicap and ucview on a recent (2016) ubuntu install
 
 ```
 sudo apt-get install bzr autoconf libtool libgettextpo0 gettext gtk-doc-tools libraw1394-dev  libpango1.0-dev libgstreamer0.10-dev libxv-dev  libgtk2.0-dev libgconf2-dev libglade2-dev libglade2.0 libglademm-2.4-dev libgstreamer-ocaml-dev libgstreamer-plugins-base0.10-dev
