@@ -1,9 +1,10 @@
 # Compiling privateface
 
-Packages needed on Ubuntu 16.10 server or Debian Jessie (Raspi inclued)
+Packages needed on Ubuntu 18.04 server or Debian Buster (Raspi inclued)
 
 ```
-sudo apt-get install libcv-dev build-essential libglib2.0-dev libhighgui-dev libcvaux-dev
+sudo apt-get install libopencv-dev build-essential libglib2.0-dev libopencv-highgui-dev 
+# libcvaux-dev -> unavailable in 18.04 bionic
 ```
 
 To get SDL going you additionally need the following
