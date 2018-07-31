@@ -1,3 +1,5 @@
+:warning: needs testing
+
 # Compiling privateface
 
 Packages needed on Ubuntu 18.04 server or Debian Buster (Raspi inclued)
@@ -94,7 +96,7 @@ ln -s /usr/local/Cellar/gettext/0.19.4/share/aclocal/nls.m4 /usr/local/share/acl
 Wrapper: https://github.com/jayrambhia/Install-OpenCV
 
 
-FIX!!!!
+:warning: Something needs: FIX!!!!
 
 ```
 sudo apt-get install build-essential cmake cmake-qt-gui
