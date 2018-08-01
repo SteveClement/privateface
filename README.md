@@ -57,15 +57,14 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 Install and do the following on a Terminal:
 
 ```
-brew tap homebrew/science
 brew install subversion opencv
 ```
 
-in theory all is fine now, but do not forget to adjust you compile line
+Theoretically all is fine now, but do not forget to adjust your compile line.
 
 As expected libunicap is not "that" easy.
 
-to get libunicap compiled you additionally need to:
+To get libunicap compiled you additionally need to:
 
 ```
 brew install intltool
@@ -88,7 +87,7 @@ OSX quirks:
 
 ```
 brew install gconf intltool gettext
-ln -s /usr/local/Cellar/gettext/0.19.4/share/aclocal/nls.m4 /usr/local/share/aclocal/nls.m4
+ln -s /usr/local/Cellar/gettext/0.19.8.1/share/aclocal/nls.m4 /usr/local/share/aclocal/nls.m4
 ```
 
 ## OpenCV from Source
