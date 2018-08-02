@@ -92,6 +92,8 @@ ln -s /usr/local/Cellar/gettext/0.19.8.1/share/aclocal/nls.m4 /usr/local/share/a
 
 ## OpenCV from Source
 
+
+TODO: Check if still factual
 Wrapper: https://github.com/jayrambhia/Install-OpenCV
 
 
