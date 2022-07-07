@@ -6,7 +6,6 @@ Packages needed on Ubuntu 18.04 server or Debian Buster (Raspi inclued)
 
 ```
 sudo apt-get install libopencv-dev build-essential libglib2.0-dev libopencv-highgui-dev 
-# libcvaux-dev -> unavailable in 18.04 bionic
 ```
 
 To get SDL going you additionally need the following
@@ -25,10 +24,17 @@ In order to better understand the Haar Principles used in privateface, check the
 http://note.sonots.com/SciSoftware/haartraining.html
 http://code.google.com/p/tutorial-haartraining/
 
-and grab the following repo:
+and grab the following repo: (optional)
 
 ```
 git clone https://github.com/Glavin001/tutorial-haartraining.git
+```
+
+Compile and test:
+
+```
+make
+./facedetect-svn --cascade="/usr/share/opencv4/haarcascades/haarcascade_frontalface_alt.xml" --nested-cascade="/usr/share/opencv4/haarcascades/haarcascade_eye_tree_eyeglasses.xml" --scale=1.3
 ```
 
 # SDLcam 
