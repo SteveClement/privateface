@@ -2,9 +2,9 @@ all: facedetect-svn
 
 develop: clean edit facedetect-svn run
 
-facedetect-svn: facedetect.c
+facedetect-svn: facedetect4.cpp
 	#$(CC) -O2 -O2 -Wall -W -D_REENTRANT  -fopenmp -Wl,-O1 -g -o $@ $^ `pkg-config opencv gthread-2.0 --cflags --libs`
-	g++ -O2 -O2 -Wall -W -D_REENTRANT  -fopenmp -Wl,-O1 -g -o $@ $^ `pkg-config opencv gthread-2.0 --cflags --libs`
+	g++ -O2 -O2 -Wall -W -D_REENTRANT  -fopenmp -Wl,-O1 -g -o $@ $^ `pkg-config opencv4 gthread-2.0 --cflags --libs`
 	#g++ -O2 -O2 -Wall -W -D_REENTRANT  -fopenmp -Wl,-O1 -L/usr/local/lib -lpthread -lopencv_core -lopencv_highgui -lopencv_objdetect -I/usr/local/include/opencv -I. -o "facedetect" facedetect.c
 
 facedetect-mac: facedetect.c
